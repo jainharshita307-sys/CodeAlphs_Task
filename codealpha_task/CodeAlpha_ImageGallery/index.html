@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<!-- Filter Buttons -->
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature Gallery</button>
+  <button onclick="filterImages('travel')">Travel Gallery</button> 
+  <button onclick="filterImages('lifestyle')">Lifestyle Gallery</button>
+  <button onclick="filterImages('technology')">Technology Gallery</button>
+  <button onclick="filterImages('fashion')">Fashion Gallery</button>
+  <button onclick="filterImages('cosmetic')">Cosmetic Gallery</button>
+  <button onclick="filterImages('education')">Education Gallery</button>
+  <button onclick="filterImages('food')">Food Gallery</button>
+
+
+
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+  <img src="./Images/nature1.avif" data-category="nature" onclick="openLightbox(0)">
+  <img src="./Images/nature2.avif" data-category="nature" onclick="openLightbox(1)">
+  <img src="./Images/nature3.avif" data-category="nature" onclick="openLightbox(2)">
+  <img src="./Images/Travel1.avif" data-category="travel" onclick="openLightbox(3)">
+  <img src="./Images/Travel2.avif" data-category="travel" onclick="openLightbox(4)">
+  <img src="./Images/Travel3.avif" data-category="travel" onclick="openLightbox(5)">
+  <img src="./Images/lifestyle1.avif" data-category="lifestyle" onclick="openLightbox(6)">
+  <img src="./Images/lifestyle2.avif" data-category="lifestyle" onclick="openLightbox(7)">
+  <img src="./Images/lifestyle3.avif" data-category="lifestyle" onclick="openLightbox(8)">
+  <img src="./Images/techno1.avif" data-category="technology" onclick="openLightbox(9)">
+  <img src="./Images/techno2.avif" data-category="technology" onclick="openLightbox(10)">
+  <img src="./Images/techno3.avif" data-category="technology" onclick="openLightbox(11)">
+  <img src="./Images/fashion1.avif" data-category="fashion" onclick="openLightbox(12)">
+  <img src="./Images/fashion2.avif" data-category="fashion" onclick="openLightbox(13)">
+  <img src="./Images/fashion3.avif" data-category="fashion" onclick="openLightbox(14)">
+  <img src="./Images/cosmetic1.avif" data-category="cosmetic" onclick="openLightbox(15)">
+  <img src="./Images/cosmetic2.avif" data-category="cosmetic" onclick="openLightbox(16)">
+  <img src="./Images/cosmetic3.avif" data-category="cosmetic" onclick="openLightbox(17)">
+  <img src="./Images/education1.avif" data-category="education" onclick="openLightbox(18)">
+  <img src="./Images/education2.avif" data-category="education" onclick="openLightbox(19)">
+  <img src="./Images/education3.avif" data-category="education" onclick="openLightbox(20)">
+  <img src="./Images/food1.avif" data-category="food" onclick="openLightbox(21)">
+  <img src="./Images/food2.avif" data-category="food" onclick="openLightbox(22)">
+  <img src="./Images/food3.avif" data-category="food" onclick="openLightbox(23)">
+  <img src="./Images/food4.avif" data-category="food" onclick="openLightbox(24)">
+  
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <span class="nav prev" onclick="changeImage(-1)">&#10094;</span>
+  <img id="lightbox-img">
+  <span class="nav next" onclick="changeImage(1)">&#10095;</span>
+</div>
+
+<!-- JavaScript Link -->
+<script src="./JavaScript/script.js"></script>
+</body>
+</html>

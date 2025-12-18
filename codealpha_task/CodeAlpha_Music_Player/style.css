@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    width: 340px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Album Art Animation */
+.player img {
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+
+#title {
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+#artist {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Progress Bar */
+.progress-container {
+    background: rgba(255,255,255,0.3);
+    height: 6px;
+    border-radius: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.progress {
+    background: #00f2fe;
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.2s linear;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+/* Controls */
+.controls button {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 22px;
+    margin: 15px 10px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.4);
+}
+
+/* Volume */
+.volume {
+    margin: 10px 0;
+}
+
+/* Playlist */
+.playlist {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.playlist h3 {
+    margin-bottom: 8px;
+}
+
+.playlist ul {
+    list-style: none;
+}
+
+.playlist li {
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.playlist li:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.playlist .active {
+    background: rgba(255,255,255,0.35);
+}
